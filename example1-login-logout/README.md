@@ -4,12 +4,12 @@
 This plugin requires node `>= 6.0.0` and npm `>= 1.4.15` (latest stable is recommended).
 
 ```shell
-> git clone https://github.com/BoodskapPlatform/boodskap-base-template 
+> git clone https://github.com/BoodskapPlatform/tutorials.git
 ```
 
 Once the repository has been cloned:
 ```shell
-> cd boodskap-base-template 
+> cd tutorials/example1-login-logout
 ```
 
 ### NPM Module Installation
