@@ -82,7 +82,7 @@ or
 Thu Jan 10 2019 14:11:51 GMT+0530 (IST) | Boodskap IoT Platform Web Portal Listening on 10001
 ************************************************************************************
 ```
-Open the Brower with this URL: http://0.0.0.0:10001
+Open the Browser with this URL: http://0.0.0.0:10001
 
 
 ### How to display your Defined Records list data
@@ -90,6 +90,7 @@ Open the Brower with this URL: http://0.0.0.0:10001
 `\webapps\js\records.js`
 
 - Update the Defined Record id the javascript file
+
 ```shell
 var RECORD_ID = <your defined record id>
 ```
