@@ -99,5 +99,7 @@ var RECORD_ID = <your defined record id>
 - To edit the HTML content
     `\views\records.html`
 
-#### plugins
+#### plugins used
 - DataTables JS
+- Moment JS
+- Sweet Alert JS
