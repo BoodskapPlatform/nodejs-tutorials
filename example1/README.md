@@ -9,7 +9,7 @@ This plugin requires node `>= 6.0.0` and npm `>= 1.4.15` (latest stable is recom
 
 Once the repository has been cloned:
 ```shell
-> cd tutorials/example1-login-logout
+> cd tutorials/example1
 ```
 
 ### NPM Module Installation
