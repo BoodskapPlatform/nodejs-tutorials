@@ -42,4 +42,4 @@ Thumbs.db
 /package-lock.json
 
 # Examples
-/example1-login-logout/node_modules
+/example1/node_modules
