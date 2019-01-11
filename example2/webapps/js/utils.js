@@ -32,3 +32,60 @@ function loadGoogleMaps(key) {
     script_tag.setAttribute("src", "https://maps.googleapis.com/maps/api/js?key=" + key + "&libraries=visualization,places,drawing&callback=geofenceInit");
     (document.getElementsByTagName("head")[0] || document.documentElement).appendChild(script_tag);
 }
+
+
+
+//Notifications
+function errorMsg(msg) {
+
+    swal("Error", msg, "error");
+}
+
+function successMsg(feedText) {
+
+    swal("Success", feedText, "success");
+}
+
+
+function searchQueryFormatter(data) {
+
+    var resultObj = {
+        total: 0,
+        data: {},
+        aggregations: {}
+    }
+
+    if (data.httpCode === 200) {
+
+        var arrayData = JSON.parse(data.result);
+
+        var totalRecords = arrayData.hits.total;
+        var records = arrayData.hits.hits;
+
+        var aggregations = arrayData.aggregations ? arrayData.aggregations : {};
+
+
+        for (var i = 0; i < records.length; i++) {
+            records[i]['_source']['_id'] = records[i]['_id'];
+        }
+
+        resultObj = {
+            "total": totalRecords,
+            "data": {
+                "recordsTotal": totalRecords,
+                "recordsFiltered": totalRecords,
+                "data": _.pluck(records, '_source')
+            },
+            aggregations: aggregations
+        }
+
+
+        return resultObj;
+
+    } else {
+
+        return resultObj;
+    }
+
+}
+

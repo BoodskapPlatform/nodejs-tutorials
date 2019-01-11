@@ -1,7 +1,11 @@
 body,a{
     font-size: 13px !important;
     font-family: 'Montserrat', sans-serif !important;
-    color:#333;
+}
+
+#bodyContent{
+ padding:20px 0px;
+
 }
 
 label{
@@ -22,6 +26,7 @@ label{
 #sideNavBar{
     display: none;
     width: 250px;
+    z-index:9
 }
 
 #sideNavBar ul{
@@ -35,6 +40,7 @@ label{
 #sideNavBar ul li a{
     text-decoration: none;
     color: #343a40;
+    display: block;
 }
 
 #sideNavBar ul li.active{

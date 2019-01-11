@@ -78,6 +78,10 @@ Routes.prototype.init = function () {
 
      ****************/
 
+    self.app.get('/records', function (req, res) {
+        res.render('records.html', {layout: ''});
+    });
+
 
 
     self.app.get('/404', sessionCheck, function (req, res) {

@@ -1,0 +1,77 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xl-12">
+
+            <h5>Total Records: <span class="totalRecords" style="font-weight: bold">0</span>
+
+                <div class="btn-group" style="float: right">
+                    <a class="btn btn-outline-secondary btn-sm" onclick="openModal(1)"><i class="fa fa-plus"></i> <span class="hidden-xs">Add Record</span></a>
+                    <a class="btn btn-outline-secondary btn-sm" data-click="panel-reload" onclick="loadRecordsList()"><i class="fa fa-undo"></i> Refresh</a>
+                </div>
+            </h5>
+
+
+
+
+            <hr>
+
+            <table class="table table-bordered nowrap table-hover" id="recordTable"  cellspacing="0" width="100%">
+
+            </table>
+        </div>
+    </div>
+</div>
+<script src="/js/records.js"></script>
+
+
+
+<div id="addRecord" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title"><span class="templateAction"></span> Record</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <form action="javascript:void(0)">
+                <div class="modal-body">
+                    <div  class="row">
+                        <div  class="col-md-7">
+                            <div  class="form-group">
+                                <label  class="inputLabel">Asset ID <span class="text-danger">*</span></label>
+                                <input  class="form-control input-sm" placeholder="" type="text" id="assetid" required>
+                            </div>
+                        </div>
+                        <div  class="col-md-7">
+                            <div  class="form-group">
+                                <label  class="inputLabel">Asset Name <span class="text-danger">*</span></label>
+                                <input  class="form-control input-sm" placeholder="" type="text" id="assetname" required>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-info btnSubmit">Proceed</button>
+                </div>
+            </form>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div id="deleteModal" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Delete Record</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure want to delete <b><span class="assetname"></span></b> record?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btnModal btn-info" onclick="proceedDelete()">Proceed</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

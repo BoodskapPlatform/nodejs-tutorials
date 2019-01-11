@@ -77,3 +77,77 @@ function getDomainProperty(name, cbk) {
     });
 
 }
+
+
+//Elastic Search
+
+function searchByQuery(id, type, data, cbk) {
+
+    if(id){
+        data['specId'] = id
+    }
+    data['type'] = type;
+
+    $.ajax({
+        url: API_BASE_PATH + "/elastic/search/query/" + API_TOKEN,
+        data: JSON.stringify(data),
+        contentType: "application/json",
+        type: 'POST',
+        success: function (data) {
+            //called when successful
+            cbk(true, data);
+        },
+        error: function (e) {
+            //called when there is an error
+            //console.log(e.message);
+            cbk(false, e);
+        }
+    });
+}
+
+
+
+//Record insert/update/delete
+
+function insertRecord(id, data,cbk){
+    $.ajax({
+        url: API_BASE_PATH + "/record/insert/dynamic/" + API_TOKEN + '/' + id,
+        data: JSON.stringify(data),
+        contentType: "text/plain",
+        type: 'POST',
+        success: function (data) {
+            cbk(true,data)
+        },
+        error: function (e) {
+            cbk(false,e)
+        }
+    });
+}
+
+function updateRecord(rid, id, data,cbk){
+    $.ajax({
+        url: API_BASE_PATH + "/record/insert/static/" + API_TOKEN + '/' + rid +'/'+id,
+        data: JSON.stringify(data),
+        contentType: "text/plain",
+        type: 'POST',
+        success: function (data) {
+            cbk(true,data)
+        },
+        error: function (e) {
+            cbk(false,e)
+        }
+    });
+}
+
+function deleteRecord(rid, id,cbk){
+    $.ajax({
+        url: API_BASE_PATH + "/record/delete/" + API_TOKEN + '/' + rid + '/' + id,
+        type: 'DELETE',
+        success: function (data) {
+            cbk(true,data)
+        },
+        error: function (e) {
+            cbk(false,e)
+        }
+    });
+}
