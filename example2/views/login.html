@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" class="ie8">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7"/>
+
+    <title>Boodskap - Highly Scalable IoT Platform</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui"
+          name="viewport"/>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+
+    <meta content="Boodskap Inc.," name="author"/>
+
+    <link href="images/favicon.ico" rel="icon">
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+    <link href="/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="/css/fontawesome-all.min.css" rel="stylesheet"/>
+
+    <link href="/css/style.css" rel="stylesheet"/>
+    <link href="/css/login.css" rel="stylesheet"/>
+
+    <script src="/libraries/pace.min.js"></script>
+
+</head>
+<body class="">
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-9 col-md-7 col-sm-6 leftContent">
+            <div>
+
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-5 col-sm-6 rightContent">
+
+            <div class="loginBox">
+                <div class="text-sm-center mb-5">
+                    <img src="/images/boodskap/bdskap-logo-2.png" height="60"/>
+                </div>
+
+                <form action="javascript:void(0)" onsubmit="login()">
+                    <div class="form-group mb-4">
+                        <label>Username</label>
+                        <input type="text" class="form-control form-control-lg" id="username" placeholder="" required/>
+                    </div>
+                    <div class="form-group mb-4">
+                        <label>Password</label>
+                        <input type="password" class="form-control form-control-lg" id="password" placeholder=""
+                               required/>
+                    </div>
+                    <div class="form-group mb-5">
+                        <button type="submit" class="btn btn-danger btn-block btn-lg" id="submitButton">Sign me in
+                        </button>
+                    </div>
+                    <p class="text-sm-center mt-3">
+                        <small style="font-size: 11px">&copy; <span class="currentYear"></span> All rights reserved.
+                        </small>
+                        <a href="https://boodskap.io" target="_blank" class="text-info poweredBy"><img
+                                src="/images/boodskap/powered-by-boodskap.png" height="25"/></a>
+                    </p>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<script src="/libraries/jquery-3.3.1.min.js"></script>
+<script src="/libraries/popper.min.js"></script>
+<script src="/libraries/bootstrap.min.js"></script>
+<script src="/libraries/js.cookie.js"></script>
+<script src="/libraries/moment.js"></script>
+<script src="/libraries/sweetalert.min.js"></script>
+
+<script src="/platform-config.js"></script>
+<script src="/js/variables.js"></script>
+<script src="/js/utils.js"></script>
+<script src="/js/api-adapter.js"></script>
+
+<script src="/js/login.js"></script>
+
+</body>
+</html>
+
