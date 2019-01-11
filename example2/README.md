@@ -87,10 +87,17 @@ Open the Browser with this URL: http://0.0.0.0:10001
 
 ### How to display your Defined Records list data
 
-`\webapps\js\records.js`
 
 - Update the Defined Record id the javascript file
+
+    `\webapps\js\records.js`
+
 
 ```shell
 var RECORD_ID = <your defined record id>
 ```
+- To edit the HTML content
+    `\views\records.html`
+
+#### plugins
+- DataTables JS
