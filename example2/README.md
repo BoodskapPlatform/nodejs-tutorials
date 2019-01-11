@@ -85,5 +85,11 @@ Thu Jan 10 2019 14:11:51 GMT+0530 (IST) | Boodskap IoT Platform Web Portal Liste
 Open the Brower with this URL: http://0.0.0.0:10001
 
 
-![Login Page](https://imgur.com/download/sgZzR0y)
-![Dashboard Page](https://imgur.com/download/nitCjzE)
+### How to display your Defined Records list data
+
+`\webapps\js\records.js`
+
+- Update the Defined Record id the javascript file
+```shell
+var RECORD_ID = <your defined record id>
+```
