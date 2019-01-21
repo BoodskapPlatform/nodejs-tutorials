@@ -30,3 +30,19 @@ Create a Domain in Boodskap IoT Platform
 - Add Record
 - Update Record
 - Delete Record
+
+
+## Example 3
+
+ To create a simple web app with User Management
+ 
+#### Modules
+- Login
+- Logout
+- Dashboard
+- List Users
+- Add Users
+- Update User
+- Delete User
+- Roles
+- User Creation Email Template

@@ -1,0 +1,106 @@
+body,a{
+    font-size: 13px !important;
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+#bodyContent{
+ padding:20px 0px;
+
+}
+
+label{
+    font-weight: bold;
+}
+
+.barmenu{
+    font-size: 1.5rem;
+    color: #fff;
+    display: inline-block;
+    margin-right: 10px;
+    cursor:pointer;
+}
+
+#headerBar, #footerBar{
+    z-index: 10;
+}
+#sideNavBar{
+    display: none;
+    width: 250px;
+    z-index:9
+}
+
+#sideNavBar ul{
+    list-style: none;
+    padding-left:0px;
+}
+
+#sideNavBar ul li{
+    padding: 1rem;
+}
+#sideNavBar ul li a{
+    text-decoration: none;
+    color: #343a40;
+    display: block;
+}
+
+#sideNavBar ul li.active{
+    background-color: #eee;
+}
+#sideNavBar ul li.active a{
+    color:#343a40;
+    font-weight:bold
+}
+
+
+footer{
+    position: fixed;
+    width: 100%;
+    bottom:0px;
+    background-color: #eee;
+    padding: 0.5rem;
+}
+
+#sideNavBar{
+    position: fixed;
+    height: 100%;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 9px 1px #eee;
+
+}
+
+
+/*Utils CSS*/
+.pace {
+    -webkit-pointer-events: none;
+    pointer-events: none;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+.pace-inactive {
+    display: none;
+}
+
+.pace .pace-progress {
+    background: #dd2249;
+    position: fixed;
+    z-index: 2000;
+    top: 0;
+    right: 100%;
+    width: 100%;
+    height: 2px;
+}
+
+
+
+div::-webkit-scrollbar {
+    width: 5px;
+}
+div::-webkit-scrollbar-track {
+    background: #eee;
+}
+div::-webkit-scrollbar-thumb {
+    background: #acacab;
+}
