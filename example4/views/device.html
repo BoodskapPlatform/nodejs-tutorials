@@ -1,0 +1,92 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xl-12">
+
+            <h5>Total Devices: <span class="totalRecords" style="font-weight: bold">0</span>
+
+                <div class="btn-group" style="float: right">
+                    <a class="btn btn-outline-secondary btn-sm" onclick="openModal(1)"><i class="fa fa-plus"></i> <span class="hidden-xs">Add Device</span></a>
+                    <a class="btn btn-outline-secondary btn-sm" data-click="panel-reload" onclick="loadDeviceList()"><i class="fa fa-undo"></i> Refresh</a>
+                </div>
+            </h5>
+
+            <hr>
+
+            <table class="table table-bordered nowrap table-hover" id="deviceTable"  cellspacing="0" width="100%">
+
+            </table>
+        </div>
+    </div>
+</div>
+<script src="/js/device.js"></script>
+
+
+
+
+
+<div id="addDevice" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title"><span class="templateAction"></span> Device</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <form action="javascript:void(0)">
+                <div class="modal-body">
+                    <div  class="row">
+                        <div  class="col-md-6">
+                            <div  class="form-group">
+                                <label  class="inputLabel">Device Id <span class="text-danger">*</span></label>
+                                <input  class="form-control input-sm" placeholder="" type="text" id="device_id" required>
+                            </div>
+                        </div>
+                        <div  class="col-md-6">
+                            <div  class="form-group">
+                                <label  class="inputLabel">Device Name <span class="text-danger">*</span></label>
+                                <input  class="form-control input-sm" placeholder="" type="text" id="device_name" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div  class="row">
+                        <div  class="col-md-6">
+                            <div  class="form-group">
+                                <label  class="inputLabel">Device Model <span class="text-danger">*</span></label>
+                                <input  class="form-control input-sm" placeholder="" type="text" id="device_model" required>
+
+                            </div>
+                        </div>
+                        <div  class="col-md-6">
+                            <div  class="form-group">
+                                <label  class="inputLabel">Device Version <span class="text-danger">*</span></label>
+                                <input  class="form-control input-sm" placeholder="" type="text" id="device_version" required>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btnModal btnSubmit btn-info">Proceed</button>
+                </div>
+            </form>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div id="deleteModal" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Delete Device</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure want to delete <b><span class="deviceId"></span> Device</b>?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btnModal btn-info" onclick="proceedDelete()">Proceed</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+

@@ -46,3 +46,16 @@ Create a Domain in Boodskap IoT Platform
 - Delete User
 - Roles
 - User Creation Email Template
+
+## Example 4
+
+ To create a simple web app with Device Management
+ 
+#### Modules
+- Login
+- Logout
+- Dashboard
+- List Devices
+- Add Device
+- Update Device
+- Delete Device
