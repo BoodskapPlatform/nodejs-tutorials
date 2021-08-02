@@ -12,9 +12,17 @@ $(document).ajaxError(function myErrorHandler(event, xhr, ajaxOptions, thrownErr
 
 function loginCall(email, password, cbk) {
     var str = DOMAIN_KEY ? '?targetDomainKey=' + DOMAIN_KEY : '';
+
+    var data = {
+        email : email,
+        password:password
+    }
+    DOMAIN_KEY ? data['targetDomainKey']=DOMAIN_KEY : ''
     $.ajax({
-        url: API_BASE_PATH + "/domain/login/" + email + "/" + password + str,
-        type: 'GET',
+        url: API_BASE_PATH + "/domain/login",
+        data: JSON.stringify(data),
+        contentType: "application/json",
+        type: 'POST',
         success: function (data) {
             cbk(true, data);
         },
